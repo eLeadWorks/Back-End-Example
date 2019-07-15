@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/*
+Theme Name: Backend Coding Example
+Theme URI: https://eleadworks.com/wp-content/themes/exampletheme/index.php
+Description: This is my dynamic Wordpress back end coding example.
+Version: 1.0
+Author: Asher - eLeadWorks
+Author URI: https://eleadworks.com/exampletheme
+*/
+@charset "UTF-8";
+/*
+Theme Name: Back End Example
+Theme URI: https://eleadworks.com/wp-content/themes/backend-example/frontapage.php
+Description: This is my dynamic Wordpress back end coding example.
+Version: 1.0
+Author: Asher
+Author URI: https://eleadworks.com/backend-example
+*/
+body, html {
+  height: 100%;
+}
+body {
+  font-family: 'Montserrat';
+  margin: 0;
+}
+body #bg {
+  background-color: #1a774b;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+@media (min-width: 786px) {
+  body #bg {
+    clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+ }
+}
+body #title {
+  color: #fff;
+  padding: 15px;
+  font-size: 1.2em;
+  text-align: center;
+}
+@media (min-width: 786px) {
+  body #title {
+    color: #fff;
+    padding: 20px 0px 0px 80px;
+    font-size: 1.2em;
+    text-align: left;
+ }
+}
+body header a {
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  font-size: 1em;
+  border: 1px solid #000;
+}
+@media (min-width: 786px) {
+  main {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "primary card";
+ }
+}
+main section#card {
+  background: #fff;
+  padding: 15px;
+  margin: 1em auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+  width: 80%;
+}
+@media (min-width: 786px) {
+  main section#card {
+    grid-area: card;
+    height: fit-content;
+    align-self: center;
+    margin: 1em;
+ }
+}
+main section#card .accordion {
+  background-color: #1a774b;
+  color: #fff;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+main section#card .active, main section#card .accordion:hover {
+  background-color: lighter #1a774b, 50%;
+}
+main section#card .panel {
+  max-width: 480px;
+  padding: 0 18px;
+  background-color: #fff;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+main section#primary {
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+@media (min-width: 786px) {
+  main section#primary {
+    grid-area: primary;
+    text-align: left;
+    margin: 4em 0 0 4em;
+ }
+}
+main section#primary h1 {
+  font-size: 3em;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+@media (min-width: 786px) {
+  main section#primary h1 {
+    width: 30%;
+    font-size: 4em;
+    line-height: 0.9em;
+ }
+}
+main section#primary p {
+  font-size: 1.1em;
+}
+main section#primary a {
+  color: #1a774b;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #fff;
+  display: block;
+  text-align: center;
+  margin: 50px auto 0 auto;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+@media (min-width: 786px) {
+  main section#primary a {
+    display: inline-block;
+    padding: 15px 60px;
+ }
+}
+footer .last-modified {
+  color: #fff;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+}
+@media (min-width: 786px) {
+  footer .last-modified {
+    color: #000;
+    right: 80px;
+    position: fixed;
+    bottom: 0;
+ }
+}
+
+  /*# sourceMappingURL=main.css.map */
