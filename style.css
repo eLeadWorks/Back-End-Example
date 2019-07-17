@@ -7,15 +7,6 @@ Version: 1.0
 Author: Asher - eLeadWorks
 Author URI: https://eleadworks.com/exampletheme
 */
-@charset "UTF-8";
-/*
-Theme Name: Back End Example
-Theme URI: https://eleadworks.com/wp-content/themes/backend-example/frontapage.php
-Description: This is my dynamic Wordpress back end coding example.
-Version: 1.0
-Author: Asher
-Author URI: https://eleadworks.com/backend-example
-*/
 body, html {
   height: 100%;
 }
