@@ -50,29 +50,8 @@ function panel($wp_customize){
 		'settings' => 'eLeadWorks-cards-callout-headline-404'
 	)));
 	
-	$wp_customize->add_section('eLeadWorks-cards-section-body',array(
-		'title'=>'body Card',
-		'panel'=>'panel',
-	));
-	
-	$wp_customize->add_setting('eLeadWorks-cards-callout-display-body');
-	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'eLeadWorks-cards-callout-display-body', array(
-		'label' => 'Turn Card on?',
-		'section' => 'eLeadWorks-cards-section-body',
-		'settings' => 'eLeadWorks-cards-callout-display-body',
-		'type' => 'select',
-		'choices' => array('No' => 'No', 'Yes' => 'Yes')
-	)));
-	
-	$wp_customize->add_setting('eLeadWorks-cards-callout-headline-body');
-	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'eLeadWorks-cards-callout-headline-body', array(
-		'label' => 'Card Label',
-		'section' => 'eLeadWorks-cards-section-body',
-		'settings' => 'eLeadWorks-cards-callout-headline-body'
-	)));
-	
 	$wp_customize->add_section('eLeadWorks-cards-section-footer',array(
-		'title'=>'footer Card',
+		'title'=>'Footer Card',
 		'panel'=>'panel',
 	));
 	
@@ -93,7 +72,7 @@ function panel($wp_customize){
 	)));
 	
 	$wp_customize->add_section('eLeadWorks-cards-section-function',array(
-		'title'=>'function Card',
+		'title'=>'Function Card',
 		'panel'=>'panel',
 	));
 	
@@ -135,7 +114,7 @@ function panel($wp_customize){
 	)));
 	
 	$wp_customize->add_section('eLeadWorks-cards-section-index',array(
-		'title'=>'index Card',
+		'title'=>'Index Card',
 		'panel'=>'panel',
 	));
 	
@@ -156,7 +135,7 @@ function panel($wp_customize){
 	)));
 	
 	$wp_customize->add_section('eLeadWorks-cards-section-style',array(
-		'title'=>'style Card',
+		'title'=>'Style Card',
 		'panel'=>'panel',
 	));
 	
@@ -179,58 +158,3 @@ function panel($wp_customize){
 }   
 
 add_action('customize_register','panel');
-
-// Adds primary callout section to admin appearance customize api screen
-function eLeadWorks_primary_callout($wp_customize) {
-	$wp_customize->add_section('eLeadWorks-primary-callout-section', array(
-		'title' => 'Main Section'
-	));
-
-	$wp_customize->add_setting('eLeadWorks-primary-callout-display', array(
-		'default' => 'No'
-	));
-
-	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'eLeadWorks-primary-callout-display', array(
-		'label' => 'Turn section on?',
-		'section' => 'eLeadWorks-primary-callout-section',
-		'settings' => 'eLeadWorks-primary-callout-display',
-		'type' => 'select',
-		'choices' => array('No' => 'No', 'Yes' => 'Yes')
-	)));
-	
-//Headline primary callout section
-	$wp_customize->add_setting('eLeadWorks-primary-callout-headline');
-	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'eLeadWorks-primary-callout-headline', array(
-		'label' => 'TEXT FIELD',
-		'section' => 'eLeadWorks-primary-callout-section',
-		'settings' => 'eLeadWorks-primary-callout-headline'
-	)));
-
-//TEXTAREA primary callout section
-	$wp_customize->add_setting('eLeadWorks-primary-callout-text');
-	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'eLeadWorks-primary-callout-text', array(
-		'label' => 'TEXT AREA',
-		'section' => 'eLeadWorks-primary-callout-section',
-		'settings' => 'eLeadWorks-primary-callout-text',
-		'type' => 'textarea'
-	)));
-	
-//LINK URL primary callout section
-	$wp_customize->add_setting('eLeadWorks-primary-callout-link');
-	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'eLeadWorks-primary-callout-link', array(
-		'label' => 'LINK URL',
-		'section' => 'eLeadWorks-primary-callout-section',
-		'settings' => 'eLeadWorks-primary-callout-link',
-	)));
-
-//BUTTON TEXT primary callout section
-	$wp_customize->add_setting('eLeadWorks-primary-callout-button');
-	$wp_customize->add_control( new WP_Customize_Control($wp_customize, 'eLeadWorks-primary-callout-button', array(
-		'label' => 'Button Text',
-		'section' => 'eLeadWorks-primary-callout-section',
-		'settings' => 'eLeadWorks-primary-callout-button'
-	)));
-		
-}
-
-add_action('customize_register', 'eLeadWorks_primary_callout');
